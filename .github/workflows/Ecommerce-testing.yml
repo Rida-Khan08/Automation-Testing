@@ -9,10 +9,10 @@ jobs:
   ecommerce-tests:
     name: Run E-Commerce Tests
     runs-on: ubuntu-latest
-    
+
     defaults:
       run:
-        working-directory: ./Playwright-e2e-suite-master
+        working-directory: Playwright-e2e-suite-master
 
     steps:
       - name: Checkout Repository
@@ -22,14 +22,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'npm'
-          cache-dependency-path: ./Playwright-e2e-suite-master/package-lock.json
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: npx playwright install --with-deps chromium
 
       - name: Run Playwright Tests
         run: npx playwright test
@@ -39,5 +37,5 @@ jobs:
         if: always()
         with:
           name: ecommerce-report
-          path: ./Playwright-e2e-suite-master/playwright-report/
+          path: Playwright-e2e-suite-master/playwright-report/
           retention-days: 30
