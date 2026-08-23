@@ -12,7 +12,6 @@ jobs:
     name: Run Playwright E2E Tests
     runs-on: ubuntu-latest
     
-    # 👇 YE LINE PATH KO CORRECT KARTI HAI
     defaults:
       run:
         working-directory: ./RealSync-QA-Platform/Sut
@@ -41,7 +40,7 @@ jobs:
 
       - name: Upload Playwright HTML Report
         uses: actions/upload-artifact@v4
-        if: always() # Fail hone par bhi report upload karein taake aap dekh sakein ke kya ghalti hui
+        if: always()
         with:
           name: playwright-report
           path: ./RealSync-QA-Platform/Sut/playwright-report/
