@@ -1,10 +1,10 @@
 const { test, expect } = require('@playwright/test');
-const DriverService = require('./pages/DriverService');
-const RideService = require('./pages/RideService');
+const DriverService = require('./Pages/DriverService');
+const RideService = require('./Pages/RideService');
 // ==========================================
 // API Test Suite - POM Style
 // ==========================================
-// Benefit: No hardcoded URLs. If endpoint changes,
+// Benefit: No hardcoded URLs. If the endpoint changes,
 // edit only DriverService.js or RideService.js
 // ==========================================
 
