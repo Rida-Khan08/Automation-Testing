@@ -23,12 +23,6 @@
   </marquee>
 </p>
 
----
-
-## 📊 Live GitHub Stats
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rida-Khan08&theme=radical&hide_border=true" width="45%">
-</p>
 
 ---
 
@@ -45,7 +39,7 @@ This is a professional **End-to-End (E2E) automation testing framework** for an 
 
 ## 📂 Project Structure
 ```text
-Automation-Testing-Portfolio/
+Automation-Testing/
 ├── pages/                 # Page Object Model (POM) Classes
 │   ├── LoginPage.js       # Login locators & actions
 │   └── InventoryPage.js   # Cart & Product actions
