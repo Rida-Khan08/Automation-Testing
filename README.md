@@ -1,6 +1,5 @@
 <div align="center">
-
-# 🎭 QA Automation Engineer | Playwright Specialist
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1000&color=2EAD33&center=true&vCenter=true&width=750&lines=QA+Automation+Engineer;Playwright+Specialist;E2E+%7C+API+%7C+Performance+Testing" alt="QA Banner"/>
 
 ### _Building Robust, Scalable Test Automation Frameworks_
 
