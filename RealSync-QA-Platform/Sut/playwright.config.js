@@ -36,8 +36,16 @@ export default defineConfig({
   baseURL: 'http://127.0.0.1:3000',
   trace: 'on',           
   screenshot: 'on',      
-  video: 'on',          
+  video: 'on',
+    
+     
 },
+    webServer: {
+    command: 'node server.js',
+    url: 'http://localhost:3000', // Agar aapka server kisi aur port par hai toh wo likhein
+    reuseExistingServer: !process.env.CI,
+    timeout: 120 * 1000,
+  },
   
 
   /* Configure projects for major browsers */
