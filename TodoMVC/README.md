@@ -171,7 +171,7 @@ This repository demonstrates my ability to build robust automation frameworks th
 
 ### 📂 **Playwright Automation Repository**
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Playwright_Automation-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rida-khan-qa/playwright-automation)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Playwright_Automation-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rida-Khan08/Automation-Testing/tree/main)
 
 
 </div>
