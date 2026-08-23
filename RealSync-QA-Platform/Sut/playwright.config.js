@@ -8,35 +8,19 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
-  
-  /* Shared settings for all the projects below */
   use: {
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
-    screenshot: 'only-on-failure', 
-    video: 'only-on-failure',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
   },
-
   webServer: {
     command: 'node server.js',
-    url: 'http://localhost:3000', 
+    url: 'http://127.0.0.1:3000/health',
     reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000, // 120 seconds wait karega
+    timeout: 120 * 1000,
   },
-
-  /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
 });
