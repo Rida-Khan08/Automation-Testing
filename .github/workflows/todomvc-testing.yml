@@ -1,0 +1,43 @@
+name: TodoMVC Tests
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'TodoMVC/**'
+  workflow_dispatch:
+
+jobs:
+  todomvc-tests:
+    name: Run TodoMVC Tests
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: TodoMVC
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright Tests
+        run: npx playwright test
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: todomvc-report
+          path: TodoMVC/playwright-report/
+          retention-days: 30
