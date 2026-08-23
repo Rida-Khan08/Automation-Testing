@@ -1,0 +1,19 @@
+{
+  "name": "fleet-tracking-sut",
+  "version": "1.0.0",
+  "description": "Real-time fleet tracking system for SQA testing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  }
+}
