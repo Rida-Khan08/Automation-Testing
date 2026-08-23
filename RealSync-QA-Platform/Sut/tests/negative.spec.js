@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
-const DriverService = require('./pages/DriverService');
-const RideService = require('./pages/RideService');
+const DriverService = require('./Pages/DriverService');
+const RideService = require('./Pages/RideService');
 
 // ==========================================
 // Negative Testing Suite - POM Style
